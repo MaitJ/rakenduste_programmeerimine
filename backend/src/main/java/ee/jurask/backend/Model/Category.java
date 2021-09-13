@@ -1,14 +1,16 @@
 package ee.jurask.backend.Model;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+
 import org.springframework.stereotype.Component;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
 
 @Getter
 @Setter
@@ -16,6 +18,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Component
 @Entity
+@ToString
 public class Category {
 
     @Id
@@ -29,4 +32,4 @@ enum CategoryType {
     PREMIUM, DELUXE, BASIC
 }
 
-//Service, repository ja controller koduseks
+// Service, repository ja controller koduseks
