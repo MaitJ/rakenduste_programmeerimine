@@ -1,33 +1,20 @@
 import React from 'react';
-import Item, {ItemType} from './Item';
-
-const testItems: Array<ItemType> = [
-  {
-
-    name: "Banana",
-    price: 5,
-    category: "Fruit"
-  },
-  {
-    name: "Apple",
-    price: 2,
-    category: "Fruit"
-  },
-  {
-    name: "Strawberry",
-    price: 3.5,
-    category: "Fruit"
-  }
-]; 
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Home from './pages/Home';
+import ItemViews from './pages/ItemView';
+import NavBar from './components/NavBar';
+import Greeting from './pages/Greeting';
 
 const App: React.FC = () => {
   return(
-    <section>
-      <h1>Rakenduste progemine</h1>
-      {testItems.map((item) => {
-        return <Item item={item}/>
-      })}
-    </section>
+    <BrowserRouter>
+    <NavBar/>
+      <Switch>
+        <Route path="/items" component={ItemViews}/>
+        <Route path="/greeting" component={Greeting}/>
+        <Route path="/" component={Home}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
