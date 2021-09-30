@@ -1,0 +1,26 @@
+nav {
+  width: auto;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+#main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+nav img {
+  width: auto;
+  height: 50px;
+}
+
+nav a {
+  padding: 0px 2px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

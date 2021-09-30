@@ -11,25 +11,25 @@ services:
     command: "run start"
     container_name: "frontend"
 
-  mongo:
+  mongo_rake:
     image: mongo:5.0.2
     ports:
       - "27017:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: "root"
       MONGO_INITDB_ROOT_PASSWORD: "root"
-    container_name: "mongo"
+    container_name: "mongo_rake"
 
   backend-node:
     depends_on:
-      - mongo
+      - mongo_rake
     build:
       context: "../backend-node"
     ports:
       - "8081:3000"
       - "9000:9000"
     environment:
-      MONGODB_URI: "mongodb://root:root@mongo/if20?authSource=admin"
+      MONGODB_URI: "mongodb://root:root@mongo_rake/if20?authSource=admin"
     volumes:
       - "../backend-node:/home/node/app:delegated"
     command: "run dev"

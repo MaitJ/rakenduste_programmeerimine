@@ -2,7 +2,7 @@ import React from 'react'
 
 export interface ItemType {
     name: string,
-    price: number,
+    price: string,
     category: string
 }
 
