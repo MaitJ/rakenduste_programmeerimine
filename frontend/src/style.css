@@ -3,6 +3,19 @@ nav {
   height: 10%;
   display: flex;
   justify-content: center;
+  background-color: #f0c987;
+}
+
+#root {
+  margin: 0 auto;
+  width: 50%;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+body {
+  background-color: #9ed0e4;
 }
 
 #main-header {
@@ -10,17 +23,35 @@ nav {
   flex-direction: column;
 }
 
+#main-header img {
+  height: 20%;
+}
+
+#main-header h4 {
+  color: white;
+  margin: 0 auto;
+}
+
 nav img {
-  width: auto;
-  height: 50px;
+  width: 4%;
 }
 
 nav a {
-  padding: 0px 2px;
+  margin: 0 auto;
+  padding: 5px;
+  align-self: center;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #637074;
+  border-radius: 5px;
 }
 
 .content-container {
+  background-color: #d64933;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  border-radius: 5px;
 }

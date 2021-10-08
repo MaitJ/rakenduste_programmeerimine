@@ -14,13 +14,15 @@ const App: React.FC = () => {
     <BrowserRouter>
     <Header/>
       <Switch>
-        <Route path="/items" component={ItemViews}/>
-        <Route path="/categories" component={ViewCategory}/>
-        <Route path="/addcategory" component={AddCategory}/>
-        <Route path="/greeting" component={Greeting}/>
-        <Route path="/cart" component={Cart}/>
-        <Route path="/additem" component={AddItem}/>
-        <Route path="/" component={Home} exact/>
+        <section className="content-container">
+          <Route path="/items" component={ItemViews}/>
+          <Route path="/categories" component={ViewCategory}/>
+          <Route path="/addcategory" component={AddCategory}/>
+          <Route path="/greeting" component={Greeting}/>
+          <Route path="/cart" component={Cart}/>
+          <Route path="/additem" component={AddItem}/>
+          <Route path="/" component={Home} exact/>
+        </section>
       </Switch>
     </BrowserRouter>
   );

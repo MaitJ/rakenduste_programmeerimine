@@ -34,3 +34,12 @@ services:
       - "../backend-node:/home/node/app:delegated"
     command: "run dev"
     container_name: "backend-node"
+
+  postgresql:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: root
+    container_name: "postgresdb"

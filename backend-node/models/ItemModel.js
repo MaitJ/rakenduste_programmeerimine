@@ -1,9 +1,12 @@
-const mongoose = require("mongoose");
+const {Schema, model }= require("mongoose");
 
-const ItemSchema = mongoose.Schema({ 
-    name: String,
-    price: Number,
-    category: String
+const ItemSchema = Schema({ 
+    name: { type: String, required: true, },
+    quality: { type: Number, required: true },
+    unused: { type: Boolean, default: true },
+    color: { type: String, enum: ['red', 'green', 'blue'], default: 'green'},
+    createdAt: { type: Date, default: Date.now() },
+    updatedAt: { type: Date }
 })
 
-export const ItemModel = mongoose.model('Item', ItemSchema);
+exports.ItemModel = model('Item', ItemSchema);
