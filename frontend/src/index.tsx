@@ -2,11 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Store from './store'
+import 'antd/dist/antd.css'
 import './style.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Store>
+      <App />
+    </Store>
   </React.StrictMode>,
   document.getElementById('root')
 );

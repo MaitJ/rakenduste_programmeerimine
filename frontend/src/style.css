@@ -1,15 +1,7 @@
-nav {
-  width: auto;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  background-color: #f0c987;
-}
-
 #root {
   margin: 0 auto;
   width: 50%;
-  background-color: #000000;
+  background-color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 10px;
 }
@@ -18,40 +10,14 @@ body {
   background-color: #9ed0e4;
 }
 
-#main-header {
-  display: flex;
-  flex-direction: column;
+.ant-layout-content {
+  margin: 25px 0px;
+  padding: 0px 25px;
 }
 
-#main-header img {
-  height: 20%;
-}
-
-#main-header h4 {
-  color: white;
-  margin: 0 auto;
-}
-
-nav img {
-  width: 4%;
-}
-
-nav a {
-  margin: 0 auto;
-  padding: 5px;
-  align-self: center;
-}
-
-nav a:hover {
-  color: white;
-  background-color: #637074;
-  border-radius: 5px;
-}
-
-.content-container {
-  background-color: #d64933;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 5px;
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
 }

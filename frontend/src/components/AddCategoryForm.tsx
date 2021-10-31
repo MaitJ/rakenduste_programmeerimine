@@ -1,5 +1,5 @@
 import {useRef} from 'react';
-import AddCategory, {Category} from '../pages/AddCategory';
+import {Category} from '../pages/AddCategory';
 
 interface Props {
     postCategoryFn: (category: Category) => void
